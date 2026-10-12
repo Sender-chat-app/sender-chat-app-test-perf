@@ -1,0 +1,12 @@
+{
+  "name": "sender-perf-seed",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "seed": "node seed.mjs",
+    "seed:smoke": "node seed.mjs --pairs 1 --messages 3 --concurrency 1",
+    "seed:full": "node seed.mjs --pairs 100 --messages-min 50 --messages-max 100 --concurrency 8",
+    "seed:compare": "node seed.mjs --pairs 400 --messages-min 80 --messages-max 150 --concurrency 8",
+    "test": "node --test lib/*.test.mjs"
+  }
+}
